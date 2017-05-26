@@ -29,3 +29,7 @@ ln -s /usr/local/python${VERSION_UPDATE}/bin/python3.6 /usr/bin/python3
 python3 -V
 ln -s /usr/local/python${VERSION_UPDATE}/bin/pip3.6 /usr/bin/pip3
 pip3 -V
+
+# 安装常用第三方库
+pip3 install beautifulsoup4
+pip3 install lxml
