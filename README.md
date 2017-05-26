@@ -33,3 +33,8 @@ bash install-certbot.sh
 ```bash
 bash install-shadowsocks.sh
 ```
+
+####   5、安装 Python 3.6.1(使用python3启动，默认python2.7.5不变)
+```bash
+bash install-python3.sh
+```
