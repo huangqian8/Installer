@@ -58,7 +58,7 @@ firewall-cmd --reload
 
 # Installing Node.js
 echo -e "\033[41;36;1m Installing Node.js \033[0m"
-curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
+curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
 yum install -y nodejs
 
 # Create a new user
