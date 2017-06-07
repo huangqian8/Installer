@@ -85,7 +85,7 @@ systemctl restart sshd.service
 
 # Create blog folder
 echo -e "\033[41;36;1m Create blog folder \033[0m"
-mkdir -p /home/$USERNAME/blog/web/public
+mkdir -p /home/$USERNAME/blog/web
 mkdir -p /home/$USERNAME/blog/git
 mkdir -p /home/$USERNAME/blog/hexo
 mkdir -p /home/$USERNAME/www
@@ -102,6 +102,7 @@ npm install hexo-baidu-url-submit --save # 百度主动提交
 npm install hexo-generator-search --save # 本地站内搜索
 npm install hexo-tag-post-link --save # Hexo博客添加文章链接
 npm install hexo-wordcount --save # 文章字数统计
+mkdir -p /home/$USERNAME/blog/web/public
 
 # Configuring Nginx
 echo -e "\033[41;36;1m Configuring Nginx \033[0m"
