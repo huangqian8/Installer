@@ -23,14 +23,15 @@ yum -y update
 yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 yum -y install perl-ExtUtils-MakeMaker
 yum -y install gcc gcc-c++ make openssl
+yum -y install wget
 
 # Install Git from SourceCode
 echo -e "\033[41;36;1m Installing Git \033[0m"
 yum -y remove git
 cd /usr/src
-wget https://www.kernel.org/pub/software/scm/git/git-2.13.1.tar.gz
-tar -zxvf git-2.13.1.tar.gz
-cd git-2.13.1
+wget https://www.kernel.org/pub/software/scm/git/git-2.16.0.tar.gz
+tar -zxvf git-2.16.0.tar.gz
+cd git-2.16.0
 make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
