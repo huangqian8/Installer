@@ -29,9 +29,9 @@ yum -y install wget
 echo -e "\033[41;36;1m Installing Git \033[0m"
 yum -y remove git
 cd /usr/src
-wget https://www.kernel.org/pub/software/scm/git/git-2.16.0.tar.gz
-tar -zxvf git-2.16.0.tar.gz
-cd git-2.16.0
+wget https://www.kernel.org/pub/software/scm/git/git-2.20.1.tar.gz
+tar -zxvf git-2.20.1.tar.gz
+cd git-2.20.1
 make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
@@ -59,7 +59,7 @@ firewall-cmd --reload
 
 # Installing Node.js
 echo -e "\033[41;36;1m Installing Node.js \033[0m"
-curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
+curl --silent --location https://rpm.nodesource.com/setup_11.x | bash -
 yum install -y nodejs
 
 # Create a new user
