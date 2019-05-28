@@ -13,7 +13,7 @@ sudo bash -c "cat > /etc/apt/sources.list.d/raspi.list" <<EOF
 deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ stretch main
 EOF
 
-# Install Python
+# Install Python 3.7.3
 sudo apt-get update -y
 sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
 wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz
@@ -34,3 +34,7 @@ python3.7 -V
 sudo apt-get autoremove python2.7
 sudo apt-get autoremove python3.5
 sudo ln -s /usr/local/bin/python3.7 /usr/bin/python
+
+# Install Scrapy
+sudo apt-get install python-pip python-lxml python-crypto python-cssselect python-openssl python-w3lib python-twisted python-dev libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev -y
+sudo pip install scrapy
