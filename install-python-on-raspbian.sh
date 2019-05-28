@@ -34,7 +34,9 @@ python3.7 -V
 sudo apt-get autoremove python2.7
 sudo apt-get autoremove python3.5
 sudo ln -s /usr/local/bin/python3.7 /usr/bin/python
+sudo ln -s /usr/local/bin/pip3.7 /usr/bin/pip
 
-# Install Scrapy
+# Install Scrapy & Requests
 sudo apt-get install python-pip python-lxml python-crypto python-cssselect python-openssl python-w3lib python-twisted python-dev libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev -y
 sudo pip install scrapy
+sudo pip install requests
