@@ -29,3 +29,8 @@ sudo apt-get --purge remove build-essential tk-dev libncurses5-dev libncursesw5-
 sudo apt-get autoremove -y
 sudo apt-get clean
 python3.7 -V
+
+# REMOVE PYTHON 2.7 & 3.5
+sudo apt-get autoremove python2.7
+sudo apt-get autoremove python3.5
+sudo ln -s /usr/local/bin/python3.7 /usr/bin/python
