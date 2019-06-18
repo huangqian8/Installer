@@ -49,3 +49,21 @@ sudo pip install lxml
 sudo pip install Pillow
 sudo pip install requests
 sudo pip install selenium
+
+# Install scrapy-deltafetch
+cd /usr/local/src
+sudo wget http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz
+sudo tar -zxvf db-5.3.28.tar.gz
+cd db-5.3.28/build_unix
+../dist/configure --prefix=/usr/local/berkeleydb --enable-cxx
+sudo make install
+sudo bash -c "cat >> /etc/ld.so.conf" <<EOF
+/usr/local/berkeleydb/lib/
+EOF
+sudo ldconfig
+cd /usr/local/src
+sudo wget https://files.pythonhosted.org/packages/e9/fc/ebfbd4de236b493f9ece156f816c21df0ae87ccc22604c5f9b664efef1b9/bsddb3-6.2.6.tar.gz
+sudo tar -zxvf bsddb3-6.2.6.tar.gz
+cd bsddb3-6.2.6
+sudo python setup.py install --berkeley-db=/usr/local/berkeleydb
+sudo pip install scrapy-deltafetch
