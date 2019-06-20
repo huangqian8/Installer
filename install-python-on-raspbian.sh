@@ -36,19 +36,20 @@ sudo apt-get autoremove python3.5 -y
 sudo ln -s /usr/local/bin/python3.7 /usr/bin/python
 sudo ln -s /usr/local/bin/pip3.7 /usr/bin/pip
 
-# Install Scrapy & Requests
+# Install Python Module
 sudo apt-get install python-pip python-lxml python-crypto python-cssselect python-openssl python-w3lib python-twisted python-dev libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev libjpeg-dev -y
 sudo pip install --upgrade pip
 sudo pip install scrapy
 sudo pip install requests
+sudo pip install lxml
+sudo pip install Pillow
+sudo pip install selenium
+sudo pip install rsa
+sudo pip install Crypto
 
 # Install Tieba Checkin
 sudo apt-get install chromium-browser chromium-chromedriver -y
 git clone https://github.com/MikuShare/tieba_sign/ && cd tieba_sign/
-sudo pip install lxml
-sudo pip install Pillow
-sudo pip install requests
-sudo pip install selenium
 
 # Install scrapy-deltafetch
 cd /usr/local/src
