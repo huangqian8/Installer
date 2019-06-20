@@ -19,7 +19,7 @@ sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev lib
 wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz
 tar xf Python-3.7.3.tar.xz
 cd Python-3.7.3
-./configure
+./configure --enable-optimizations
 make -j 4
 sudo make altinstall
 cd ..
